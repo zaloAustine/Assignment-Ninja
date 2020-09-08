@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#D8E5E5E5"
+    android:layout_height="match_parent"
+    tools:context=".Views.Activities.BottomActivity">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="12dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="12dp"
+                    app:iconGravity="textStart"
+                    android:shadowRadius="4"
+                    app:iconTint="@color/gray"
+                    style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+                    android:layout_marginLeft="8dp"
+                    app:backgroundTint="#D8E5E5E5"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/search"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:paddingLeft="12dp"
+                    android:hint="Search Room..."
+                    android:layout_marginRight="12dp"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_height="38dp"/>
+
+
+
+
+            </LinearLayout>
+
+
+            <com.github.abdularis.civ.CircleImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="right"
+                android:layout_margin="12dp"
+                android:src="@drawable/face"
+                app:civ_border_color="@color/white"
+                app:civ_circle_background_color="@color/white"
+                app:strokeColor="@color/white" />
+
+
+        </LinearLayout>
+
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rooms"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginLeft="12dp"
+            android:textSize="30sp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="12dp"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="100dp"
+                android:text="Private"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/gray"
+                android:layout_marginRight="12dp"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="100dp"
+                android:text="Public"
+                android:background="@drawable/outline5"
+                android:backgroundTint="@color/searchbackground"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:rippleColor="@color/colorAccent"
+            app:cardBackgroundColor="@color/gray"
+            android:foreground="?android:attr/selectableItemBackground"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:transitionName="image"
+                xmlns:android="http://schemas.android.com/apk/res/android" />
+
+
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/book"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:rippleColor="@color/colorAccent"
+            app:cardBackgroundColor="@color/gray"
+            android:foreground="?android:attr/selectableItemBackground"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/image"
+                android:transitionName="image"
+                xmlns:android="http://schemas.android.com/apk/res/android" />
+
+
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="?android:attr/windowBackground"
+        android:foreground="?attr/selectableItemBackground"
+        app:elevation="10dp"
+        app:itemIconTint="@drawable/bottom_nav_selector2"
+        app:itemTextColor="@android:color/black"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/master_bottom_navigation" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:src="@drawable/add2"
+        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
